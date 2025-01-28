@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { AppContent } from "../context/AppContext";
 import axios from "axios";
 import { toast } from "react-toastify";
+import authenticity from '../assets/authenticity.png';
 const Navbar = () => {
   const navigate = useNavigate();
 
@@ -40,7 +41,7 @@ const Navbar = () => {
     }
   return (
     <div className="w-full flex justify-between items-center p-4 sm:p-6 sm:px-24 absolute top-0">
-      <img src={assets.logo} alt="" className="w-28 sm:w-32" />
+      <img src={authenticity} alt="" className="w-15 sm:w-20" />
       {userData ? (
         <div className="w-8 h-8 flex justify-center items-center rounded-full bg-black text-white relative group">
           {userData.name[0].toUpperCase()}
