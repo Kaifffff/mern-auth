@@ -159,7 +159,7 @@ export const verifyEmail = async (req , res)=>{
             });
         }
 
-        if(user.verifyOtp === '' || user.verifyOtp != otp){
+        if(user.verifyOtp === '' || user.verifyOtp !== otp){
             return res.json({
                 success:false,
                 message:'Invalid OTP'
